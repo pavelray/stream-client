@@ -38,14 +38,15 @@ export class GoogleAuth extends Component {
         }else if(this.state.isSignedIn){
             return(
                 <button onClick={this.onSignOut} className="ui red google button">
-                    <i className="google icon">Sign Out</i>
+                   Sign Out
                 </button>
             )
         }
         else{
             return(
+                
                 <button onClick={this.onSignIn} className="ui red google button">
-                    <i className="google icon">Sign In</i>
+                    <i className="google icon"></i>
                 </button>
             )
         }
@@ -53,9 +54,9 @@ export class GoogleAuth extends Component {
 
     render() {
         return (
-        <>
-           {this.renderAuthButton()}
-        </>
+            <span className="item">
+                {this.renderAuthButton()} 
+            </span>
         )
     }
 }
